@@ -1,291 +1,255 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
+
+
+
+
 
 body {
-  background-color: #0a1530;
-  color: #cbd5df;
-  overflow-x: hidden;
-  min-height: 100vh;
-  line-height: 1.5;
-  width: 100%;
+    display: grid;
+    background-color: rgb(246, 245, 248);
+    padding: 30px;
 }
 
-/* Intro Animation */
-.intro-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #0f1625;
-  z-index: 999;
-
-  /* Using grid */
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  justify-items: center;
-  animation: slideOutScreen 1s cubic-bezier(0.85, 0, 0.15, 1)forwards;
-  animation-delay: 3.8s;
-}
-
-.intro-name {
-  font-size: 63px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  color: #aecdec;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: revealtext 2s cubic-bezier(0.2, 1, 0.2, 1) forwards;
-  animation-delay: 0.4s;
-}
-
-.intro-subtitle {
-  font-size: 23px;
-  font-weight: 700;
-  color: rgb(0, 195, 255);
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  margin-top: 15px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: revealtext 3s cubic-bezier(0.2, 1, 0.2, 1) forwards;
-  animation-delay: 1.4s;
-  text-align: center;
-}
-
-@keyframes revealtext {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideOutScreen {
-  to {
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-/* Responsive Resume Content */
-.resume-container {
-
-  justify-content: center;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: revealresume 1.2s cubic-bezier(0.2, 1, 0.2, 1) forwards;
-  animation-delay: 4.2s;
-
-  /* using grid */
-  display: grid;
-  gap: 10px;
-}
-
-@keyframes revealresume {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive header by using grid */
-header {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 15px;
-  align-items: center;
-}
-
-.heading {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-h1 {
-  color: rgb(198, 224, 243);
-  font-size: 36px;
-  font-weight: 700;
-  display: grid;
-  grid-row: 1;
-  justify-content: start;
-  letter-spacing: 1px;
-  font-family: ui-monospace;
-}
-
-h3 {
-  color: rgb(7, 223, 238);
-  font-size: 22px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.container {
+     max-width: 80vw;
+    justify-self: center;
+    margin: 0 auto;
+    background-color: white;
+    padding: 50px;
 
 }
 
-.intro {
-  color: rgb(207, 219, 228);
-  font-size: 15px;
-  font-weight: 300;
-  grid-column: 1;
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.info h1 {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.info h4 {
+    
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 14px;
+     font-weight: 400;
 }
 
 img {
-  max-width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 2px solid rgb(2, 245, 233);
-  object-fit: cover;
-  display: grid;
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: end;
+    border: 2px solid rgb(37, 87, 88);
+    background-color: rgba(20, 151, 184, 0.425);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: grid;
+    justify-self: end;
+
 
 }
-
 
 .contact-bar {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  justify-items: end;
+    font-size: 16px;
+    color: rgb(41, 40, 44);
+    text-align: right;
+    display: grid;
+    row-gap: 8px;
+    align-content: center;
 }
 
-.contact-link {
-  color: rgb(135, 135, 197);
-  text-decoration: none;
-  font-size: 15px;
-  transition: color 0.3s ease;
+a {
+    color: rgb(41, 40, 44);
+    text-decoration: none;
 }
 
-.contact-link:hover {
-  color: rgb(6, 214, 241);
+a:hover {
+    color: rgb(54, 143, 155);
 }
 
-.resume-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 60px;
+.section-divider {
+    border: 0;
+    background: #3a4658;
+    height: 2px;
+    margin: 15px 0;
+}
+
+.resume-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.left-col {
+    display: grid;
+    row-gap: 30px;
+    align-content: start;
+}
+
+.heading1 {
+    color: rgba(19, 18, 18, 0.966);
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.heading2 {
+    font-size: 18px;
+    color: rgb(36, 33, 33);
+    font-weight: 700;
+}
+
+.heading3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(27, 26, 26, 0.884);
+}
+
+.dates {
+    font-style: italic;
+    color: #57aeb4;
+    font-size: 11px;
+}
+
+.location {
+    font-style: italic;
+    color: #57aeb4;
+    font-size: 11px;
+    align-self: end;
+}
+
+.task {
+    font-style: italic;
+    color: #57aeb4;
+    font-weight: 500;
+}
+
+ul {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.925);
+    font-weight: 400;
+}
+
+.ui {
+    display: inline;
 }
 
 
-.line {
-  width: 80vw;
-  height: 2px;
-  background-color: rgba(7, 224, 214, 0.829);
-  justify-self: center;
-}
-
-
-.col1 {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-rows: max-content;
-  row-gap: 15px;
-}
-
-.col2 {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-rows: max-content;
-  row-gap: 15px;
-}
-
-h2 {
-
-  font-size: 32px;
-  font-weight: 400;
-  text-transform: uppercase;
-  grid-column: 1;
-  color: rgb(45, 238, 231);
-}
-
-h4 {
-  font-size: 22px;
-  color: #cfdff1;
-}
-
-p {
-  color: rgb(181, 187, 192);
-}
-
-span {
-  color: rgb(9, 183, 189);
-  font-size: 12px;
-  margin-right: 25px;
-}
-
-.skill-element {
-  padding: 10px;
-  margin: 3px;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
-}
-
-.premier-projects {
-  height: fit-content;
-}
-
-/* Media queries */
-@media (max-width: 530px) {
-  header {
-    grid-template-columns: 1fr;
-  }
-
-  .heading h1 {
-    justify-self: center;
-    font-size: 28px;
-
-  }
-
-  h2{
-    margin-top: 20px;
-    text-decoration: underline;
-  }
-
-  h3 {
+.skills {
+    background-color: #869097;
+    color: white;
+    font-size: 13px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 4px;
     text-align: center;
-  }
+    margin-left: 5px;
 
-  .intro {
+}
+
+.project-links {
+    color: #57aeb4;
+}
+
+.lang {
+    color: #57aeb4;
+}
+
+.languages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.interest {
+    border: 2px solid #869097;
+    border-radius: 5px;
     text-align: center;
-  }
 
-  img {
-    justify-self: center;
-    grid-row: auto;
-    grid-column: auto;
-  }
 
-  .contact-bar {
-    justify-items: center;
-  }
 
-  .intro-name {
-    font-size: 40px;
-  }
+}
 
-  .resume-layout {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    
-    text-align: center;
+.interest-block1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 95vw;
+        padding: 30px;   
+    }
+.resume-main {
+        gap: 30px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
    
-  }
+    .header {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+ .info {
+        text-align: center;
+    }
+ .contact-bar {
+        text-align: center; 
+        justify-content: center;
+    }
+ img {
+        justify-self: center;
+    }
 
-  .skill-element {
-    margin-left: 66px;
-  }
+ body {
+        padding: 10px;
+    }
+.container {
+        max-width: 100vw; 
+        padding: 15px;    
+    }
+.resume-main {
+        grid-template-columns: 1fr 1fr; 
+        gap: 15px; 
+    }
+    
+    .info h1{
+     font-size: 24px
+    }
+    .heading1 { 
+        font-size: 18px;
+     }
+    .heading2, .heading3 {
+         font-size: 14px;
+         }
+    .info p, ul, .contact-bar {
+         font-size: 12px;
+         }
+    .skills, .interest {
+         font-size: 11px;
+         }
 
+    .interest-block1 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+    }
 
+    .languages {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
 }
